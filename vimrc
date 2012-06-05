@@ -1,6 +1,7 @@
 color wombat
 set number
 set clipboard=unnamed
+set ignorecase
 syntax on
 
 filetype indent plugin on
