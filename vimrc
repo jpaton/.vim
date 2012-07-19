@@ -26,4 +26,4 @@ nmap ,t :!(cd %:p:h;make tags)&
 " localvimrc configuration
 
 let g:localvimrc_sandbox = 0
-let g:localvimrc_whitelist = "/home/paton/workspace/xen-blkback-ljx/.lvimrc"
+let g:localvimrc_whitelist = "/home/paton/.*"
