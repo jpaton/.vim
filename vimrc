@@ -27,3 +27,12 @@ nmap ,t :!(cd %:p:h;make tags)&
 
 let g:localvimrc_sandbox = 0
 let g:localvimrc_whitelist = "/home/paton/.*"
+
+" set smaller font size when running gui
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 9
+  elseif has("gui_win32")
+    set guifont=Consolas:h11:cANSI
+  endif
+endif
