@@ -36,3 +36,9 @@ if has("gui_running")
     set guifont=Consolas:h11:cANSI
   endif
 endif
+
+" define command to refresh tags and reset cscope
+command RefTags make tags | cs reset
+
+" define command to write and make
+command Wmake w | make
