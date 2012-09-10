@@ -23,4 +23,19 @@ nmap ,t :!(cd %:p:h;make tags)&
 " localvimrc configuration
 
 let g:localvimrc_sandbox = 0
-let g:localvimrc_whitelist = "/home/paton/workspace/blkback-ljx/.lvimrc"
+let g:localvimrc_whitelist = "/home/paton/.*"
+
+" set smaller font size when running gui
+if has("gui_running")
+  if has("gui_gtk2")
+    set guifont=Inconsolata\ 9
+  elseif has("gui_win32")
+    set guifont=Consolas:h11:cANSI
+  endif
+endif
+
+" define command to refresh tags and reset cscope
+command RefTags make tags | cs reset
+
+" define command to write and make
+command Wmake w | make
