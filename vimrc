@@ -40,3 +40,10 @@ command RefTags make tags | cs reset
 
 " define command to write and make
 command Wmake w | make
+
+" prevent loading of minibufexplorer if on Linux -- presumably we are
+" on a department machine in that case
+let s:uname = system("uname")
+if s:uname == "Linux"
+	let g:loaded_minibufexplorer = 1
+endif
