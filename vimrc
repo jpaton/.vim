@@ -44,6 +44,6 @@ command Wmake w | make
 " prevent loading of minibufexplorer if on Linux -- presumably we are
 " on a department machine in that case
 let s:uname = system("uname")
-if s:uname == "Linux"
+if s:uname == "Linux\n"
 	let g:loaded_minibufexplorer = 1
 endif
