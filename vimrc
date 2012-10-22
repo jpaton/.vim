@@ -43,3 +43,6 @@ command RefTags make tags | cs reset
 
 " define command to write and make
 command Wmake w | make
+
+" Google Go support
+set rtp+=$GOROOT/misc/vim
