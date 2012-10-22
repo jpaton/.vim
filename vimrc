@@ -18,9 +18,6 @@ let g:miniBufExplMapWindowNavArrows = 1
 let g:miniBufExplMapCTabSwitchBufs = 1 
 let g:miniBufExplModSelTarget = 1 
 
-" toggle tagbar
-nmap <F8> :TagbarToggle<CR> 
-
 " mapping to rebuild ctags file in directory of current file
 nmap ,t :!(cd %:p:h;make tags)&
 
@@ -46,3 +43,10 @@ command Wmake w | make
 
 " Google Go support
 set rtp+=$GOROOT/misc/vim
+
+" prevent loading of minibufexplorer if on Linux -- presumably we are
+" on a department machine in that case
+let s:uname = system("uname")
+if s:uname == "Linux\n"
+	let g:loaded_minibufexplorer = 1
+endif
