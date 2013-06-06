@@ -42,11 +42,11 @@ command RefTags make tags | cs reset
 command Wmake w | make
 
 " Google Go support
-set rtp+=$GOROOT/misc/vim
+"set rtp+=$GOROOT/misc/vim
 
 " prevent loading of minibufexplorer if on Linux -- presumably we are
 " on a department machine in that case
-let s:uname = system("uname")
-if s:uname == "Linux\n"
-	let g:loaded_minibufexplorer = 1
-endif
+"let s:uname = system("uname")
+"if s:uname == "Linux\n"
+	"let g:loaded_minibufexplorer = 1
+"endif
