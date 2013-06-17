@@ -6,7 +6,7 @@ syntax on
 
 filetype indent plugin on
 au FileType python setlocal tabstop=8 expandtab shiftwidth=4 softtabstop=4
-au FileType cpp setlocal tabstop=2 expandtab shiftwidth=2 softtabstop=2
+au FileType cpp setlocal fdm=syntax tabstop=2 expandtab shiftwidth=2 softtabstop=2
 au FileType c setlocal fdm=syntax foldlevel=100 tabstop=4 expandtab shiftwidth=4 softtabstop=4
 
 " open and close folds with spacebar
